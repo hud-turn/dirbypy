@@ -9,8 +9,8 @@ sys.path.append('src')
 from unittest.mock import MagicMock
 from unittest import mock
 
-from _dirbpy.__main__ import *
-from _dirbpy.URLBruteforcer import URLBruteforcer
+from _dirbypy.__main__ import *
+from _dirbypy.URLBruteforcer import URLBruteforcer
 
 class AnyStringWith(str):
     def __eq__(self, other):
