@@ -1,11 +1,11 @@
 import setuptools
-from src._dirbpy import __version__
+from src._dirbypy import __version__
 
 with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='dirbpy',
+    name='dirbypy',
     version=__version__,
     license="MIT license",
     author='Marc-Olivier Bouchard',

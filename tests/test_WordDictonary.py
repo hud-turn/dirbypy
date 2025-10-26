@@ -6,7 +6,7 @@ sys.path.append('src')
 
 from unittest.mock import MagicMock
 
-from _dirbpy.WordDictonary import WordDictonary
+from _dirbypy.WordDictonary import WordDictonary
 
 WORD_LIST = ['css', 'js', 'test']
 

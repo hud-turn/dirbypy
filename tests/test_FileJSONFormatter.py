@@ -7,9 +7,9 @@ sys.path.append('src')
 from unittest.mock import MagicMock
 from unittest import mock
 
-from _dirbpy.__main__ import GENERATED_WORD_MESSAGE 
-from _dirbpy.FileJSONFormatter import FileJSONFormatter
-from _dirbpy.URLBruteforcer import URLBruteforcer
+from _dirbypy.__main__ import GENERATED_WORD_MESSAGE 
+from _dirbypy.FileJSONFormatter import FileJSONFormatter
+from _dirbypy.URLBruteforcer import URLBruteforcer
 
 
 class TestFileJsonFormatter:

@@ -7,7 +7,7 @@ sys.path.append('src')
 from unittest.mock import MagicMock
 from unittest import mock
 
-from _dirbpy.URLBruteforcer import URLBruteforcer
+from _dirbypy.URLBruteforcer import URLBruteforcer
 
 HOST = 'http://localhost.com/'
 WORD_LIST = ['css', 'js', 'test']
