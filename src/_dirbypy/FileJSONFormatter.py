@@ -1,7 +1,7 @@
 import json_log_formatter
 import re
 
-from _dirbpy.URLBruteforcer import URLBruteforcer
+from _dirbypy.URLBruteforcer import URLBruteforcer
 
 class FileJSONFormatter(json_log_formatter.JSONFormatter):
 

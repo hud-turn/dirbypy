@@ -9,10 +9,10 @@ import logging
 
 import requests
 
-from _dirbpy.URLBruteforcer import URLBruteforcer
-from _dirbpy.WordDictonary import WordDictonary
-from _dirbpy.FileJSONFormatter import FileJSONFormatter
-from _dirbpy import __version__, __author__
+from _dirbypy.URLBruteforcer import URLBruteforcer
+from _dirbypy.WordDictonary import WordDictonary
+from _dirbypy.FileJSONFormatter import FileJSONFormatter
+from _dirbypy import __version__, __author__
 
 DIRBPY_COOL_LOOKING = '''
 ________   .__        ___.
@@ -109,6 +109,9 @@ def get_parser():
     parser.add_argument('--hosts-file',
                         type=argparse.FileType('r'),
                         help='File with urls to scan')
+    parser.add_argument('-w',
+                        action='store_true',
+                        help='')
 
     return parser
 
