@@ -9,6 +9,8 @@ __version__ = '1.8.4'
 
 __author__ = "Marc-Olivier Bouchard"
 
+__modifiers__ = "Hudson Turner"
+
 __license__ = "MIT"
 
 __email__ = "mo.bouchard1997@gmail.com"

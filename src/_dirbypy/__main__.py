@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import os
 
 import argparse
 import glob
@@ -12,27 +13,35 @@ import requests
 from _dirbypy.URLBruteforcer import URLBruteforcer
 from _dirbypy.WordDictonary import WordDictonary
 from _dirbypy.FileJSONFormatter import FileJSONFormatter
-from _dirbypy import __version__, __author__
+from _dirbypy import __version__, __author__, __modifiers__
 
 DIRBPY_COOL_LOOKING = '''
-________   .__        ___.
-\______ \  |__|_______\_ |__  ______  ___.__.
- |    |  \ |  |\_  __ \| __ \ \____ \<   |  |
- |    `   \|  | |  | \/| \_\ \|  |_> >\___  |
-/_______  /|__| |__|   |___  /|   __/ / ____|
-        \/                 \/ |__|    \/
+ _____   _       _                       
+(____ \ (_)     | |                      
+ _   \ \ _  ____| | _  _   _ ____  _   _ 
+| |   | | |/ ___) || \| | | |  _ \| | | |
+| |__/ /| | |   | |_) ) |_| | | | | |_| |
+|_____/ |_|_|   |____/ \__  | ||_/ \__  |
+                      (____/|_|   (____/     
+
 '''
 
-BLUE = "\033[1;34m"
-GREEN = "\033[0;32m"
-RESET = "\033[0;0m"
+class style:
+    RED = '\033[91m'
+    ORANGE = '\033[38;5;216m'
+    YELLOW = '\033[33m'
+    GREEN = '\033[0;32m'
+    BLUE = '\033[1;34m'
+    PURPLE = '\033[91m'
+    RESET = '\033[0;0m'
 
 NUMBER_OF_THREAD_PARAMETER_ERROR = 'The number of thread is to high. Current: {}, Max: {}'
 GENERATED_WORD_MESSAGE = "Generated words: {}"
 
-FORMAT = '{}[%(asctime)s]{} {}[%(levelname)s]{} %(message)s'.format(GREEN, RESET, BLUE, RESET)
+FORMAT = '{}[%(asctime)s]{} {}[%(levelname)s]{} %(message)s'.format(style.GREEN, style.RESET, style.BLUE, style.RESET)
 logging.basicConfig(format=FORMAT, level=logging.INFO)
 ROOT_LOGGER = logging.getLogger()
+
 
 
 def remove_none_value_in_kwargs(params_dict: dict) -> dict:
@@ -129,8 +138,9 @@ def get_parsed_args(parser, args):
 
 
 def main():
-    print(DIRBPY_COOL_LOOKING)
+    print(style.ORANGE + DIRBPY_COOL_LOOKING + style.RESET)
     print('Author: {}'.format(__author__))
+    print('Modified by: {}'.format(__modifiers__))
     print('Version: {}\n'.format(__version__))
    
     parser = get_parser()
