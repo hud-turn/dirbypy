@@ -79,7 +79,7 @@ def get_parser():
                         type=str,
                         help='This is the url to scan')
     parser.add_argument('-f', '--file',
-                        default="./_dirbypy/wordlists/common.txt",
+                        default=os.path.join(os.path.curdir, '_dirbypy', 'wordlists', 'common.txt'),
                         type=str,
                         help='Input file with words.')
     parser.add_argument('-o', '--online',
