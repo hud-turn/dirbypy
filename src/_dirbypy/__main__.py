@@ -79,6 +79,7 @@ def get_parser():
                         type=str,
                         help='This is the url to scan')
     parser.add_argument('-f', '--file',
+                        default="./_dirbypy/wordlists/common.txt",
                         type=str,
                         help='Input file with words.')
     parser.add_argument('-o', '--online',
@@ -118,9 +119,9 @@ def get_parser():
     parser.add_argument('--hosts-file',
                         type=argparse.FileType('r'),
                         help='File with urls to scan')
-    parser.add_argument('-w',
+    parser.add_argument('-fh','--fuzzy-hash',
                         action='store_true',
-                        help='')
+                        help='Fuzzy hash the webpage to find directories that are similar to each other')
 
     return parser
 

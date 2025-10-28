@@ -17,12 +17,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "json-log-formatter" },
+    { name = "py-tlsh" },
     { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "json-log-formatter", specifier = ">=1.1.1" },
+    { name = "py-tlsh", specifier = ">=4.7.2" },
     { name = "pytest", specifier = ">=8.4.2" },
 ]
 
@@ -58,6 +60,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe
 wheels = [
     { url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746", size = 20538, upload-time = "2025-05-15T12:30:06.134Z" },
 ]
+
+[[package]]
+name = "py-tlsh"
+version = "4.7.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/5b/4d860cffd3e6e7afb277e159d97e11583fc3b611d22355799364dff325f1/py-tlsh-4.7.2.tar.gz", hash = "sha256:5b6943cfd93a168671f33b84828dca34d252278bdedcacf25cbe711fda655e9f", size = 42097, upload-time = "2021-07-02T05:17:23.79Z" }
 
 [[package]]
 name = "pygments"
